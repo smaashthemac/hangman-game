@@ -1,6 +1,8 @@
 HARRY POTTER HANGMAN
 
+
 word bank
+
 	harry
 	voldemort
 	wand
@@ -12,22 +14,30 @@ word bank
 	witch
 	castle
 
+
 game steps
+
 	random word from word bank 
-		// taken from an array
-		is generated with blank spaces for each letter
+		// word bank is an array; random work taken from here
+		*is generated with blank spaces for each letter
 			// which is printed to the html inner doc
-	
 	user enters a letter
 		// which is turned lowercase
-		// the entered letter is compared to each letter of the particular word
-
+		*// the entered letter is compared to each letter of the particular word
 	if the letter is in the word, that space is filled in
 		// if the letter is a match, that space is filled in on the html inner doc
-	
 	the user gets 10 trys to guess letters or solve the word
 		// after 10 wrong letters, the word is filled in
-	
-	there is a reset button?
-		// the user can reset at any point, or reset when the word is solved. a new word will appear
+	automatically choose another word for player to play
+		// when the word is solved. a new word will appear
 
+
+div sections include
+
+	instructions
+		// press any key to start
+	wins
+	current word
+	_ _ _ _ _ _ _ _
+	number of guesses remaining
+	letters already guessed

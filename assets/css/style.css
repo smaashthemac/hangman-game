@@ -1,0 +1,21 @@
+body {
+	background: url("http://media.harrypotter.bloomsbury.com/rep/g/page-background-shell%20-%202.png");
+	font-family: "Verdana";
+}
+
+header {
+	margin-left: 325px;
+	margin-top: 25px;
+}
+
+#container {
+	background: #fff999;
+	margin-left: 500px;
+	margin-top: 20px;
+	margin bottom: 50px;
+	width: 600px;
+	height: 700px;
+	padding: 25px;
+	text-align: center;
+	border: rebeccapurple solid 4px;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Harry Potter Hangman</title>
+	<!--<script src="assets/javascript/game.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+<!--begin HTML code-->
+<header>
+
+	<img src="assets/images/hp-hangman.png" alt="Harry Potter Hangman" />
+
+</header>
+
+<div id="container">
+	<h1>PRESS ANY KEY TO START THE MAGIC</h1>
+	<br>
+	<hr>
+	<br>
+	<div id="wins">
+	</div>
+	<br>
+	<div id="currentWord">
+		<h1>Current Word</h1>
+	</div>
+	<br>
+	<div id="blankWord">
+	</div>
+	<br>
+	<div id="guessesRemain">
+	</div>
+	<br>
+	<div id="lettersGuessed">
+	</div>
+
+</div>
+
+<!--end HTML code-->
+
+<!--begin javascript code-->
+
+<script type="text/javascript">
+
+// word bank if array //
+var word = ["harry", "voldemort", "wand", "owl", "muggle", "broom", "hogwarts", "wizard", "witch", "castle"];
+
+// word bank if object //
+var words = {
+	word1: "harry", 
+	word2: "voldemort", 
+	word3: "wand", 
+	word4: "owl", 
+	word5: "muggle", 
+	word6: "broom", 
+	word7: "hogwarts", 
+	word8: "wizard", 
+	word9: "witch", 
+	word10: "castle"};
+
+// randomly chooses from word array //
+var chooseWord = word[Math.floor(Math.random() * word.length)];
+document.querySelector("#blankWord").innerHTML = chooseWord;
+
+//document.querySelector("#blankWord").innerHTML = "_ " * chooseWord.length;//
+
+// fill in blanks depending on how many letters chooseWord has //
+//function blanksChooseWord (); {
+
+//}
+
+// user enters a letter; changed to lowercase //
+document.onkeyup = function(event) {
+	var userGuess = String.fromCharCode(event.keycode).toLowerCase
+}
+
+// sees if the user guess is equal to any letter in the word//
+//if(userGuess == chooseWord[0] || 
+
+// if it is equal to a letter in the word, the letter fills that blank space //
+
+// if it is not equal to a letter in the word, it subtracts one from guessesRemain //
+
+// the loop, from user entered letter to filling in /or/ subtracting from losses, repeats //
+
+// repeats until /either/ word is complete (all blanks are filled) or guessesRemain hits zero //
+
+// if word is complete, image related to word appears //
+
+// if word is complete and image appears, how do we reset the game? //
+
+// if guessesRemain hits zero, the loop, from randomly chosen word to /either/ word is complete /or/ guessesRemain hits zero, repeats //
+
+
+
+</script>	
+</body>
+</html>
