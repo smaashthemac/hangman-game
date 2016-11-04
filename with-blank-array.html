@@ -46,7 +46,7 @@
 		<h1>Letters Guessed</h1>
 	</div>
 	<br>
-	<div id="wrongLetters">
+	<div id="guessesRemain">
 	</div>
 
 </div>
@@ -57,62 +57,41 @@
 
 <script type="text/javascript">
 
-// word bank if array //
-var possibleWords = ["harry", "voldemort", "wand", "owl", "muggle", "broom", "hogwarts", "wizard", "witch", "castle"];
+// word bank of complete words //
+var word = ["harry", "voldemort", "wand", "owl", "muggle", "broom", "hogwarts", "castle"];
 
-var rightGuesses = [];
+// word bank of blank words //
+var blankWord = ["-----", "---------", "----", "---", "------", "-----", "--------", "------"];
 
-// randomly chooses from word array //
-var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
+// randomly chooses from blankWord array, which will match up to word array later //
+//var chooseWord = blankWord[Math.floor(Math.random() * word.length)];
+//document.querySelector("#blankWord").innerHTML = chooseWord;
 
-// console log's the word for troubleshooting/cheating purposes
-console.log("For cheating purposes, the word is: " + chosenWord);
+// first word from blankWord array is shown in blankWord div
+document.querySelector("#blankWord").innerHTML = blankWord[0];
 
-// fill in blanks depending on how many letters chosenWord has //
-function blankSpaces() {
-	var blanks = "";
-	for (var i = 0; i < chosenWord.length; i++) {
-		blanks += "- ";
-		console.log(i,' blanks is: ', blanks);
-		document.querySelector("#blankWord").innerHTML = blanks;
-	}
-}
-// runs function to display blanks
-blankSpaces()
 
-// function tells if the guessed letter is in the word
-function hasLetter(word, letter) {
-	return word.indexOf(letter) !== -1;
-}
-	
-	// return letter if so, otherwise return dash
-// join the array back into a string
+// function that will replace the blank in a string with userGuess letter
 
-// 
-function makePartialWord (chosenWord, rightGuesses) {
-	// split string into an array
-	var splitString = chosenWord.split("");
-	// map the array
-	var partialWord = splitString.map(function (letter) {
-		// check if letter is right
-		hasLetter(rightGuesses, letter);
-		
-	})	
-}
+console.log(word[0].charAt(0));
+console.log(word[0].charAt(1));
+console.log(word[0].charAt(2));
+console.log(word[0].charAt(3));
 
-// user enters a letter; changed to lowercase
 document.onkeyup = function(event) {
-	var guessedLetter = String.fromCharCode(event.keycode).toLowerCase();
-	if (hasLetter(chosenWord, guessedLetter)) {
-		rightGuesses.push(guessedLetter);
-		document.querySelector("#blankWord").innerHTML = makePartialWord(chosenWord, rightGuesses);
-
-	} else {
-		document.querySelector("#wrongLetters").innerHTML = guessedLetter;
-	}
+	// changes userGuess to lowercase
+	var userGuess = String.fromCharCode(event.keycode).toLowerCase;
+	// checks to see if userGuess matches any letters in word[0]
+		if(userGuess === word[0].charAt(0)); {
+			alert("yay");
+		} if(userGuess !== word[0].charAt(0)); {
+			alert("wrong");
+		}
 }
+
 
 // sees if the user guess is equal to any letter in the word//
+//if(userGuess == chooseWord[0] || 
 
 // if it is equal to a letter in the word, the letter fills that blank space //
 
