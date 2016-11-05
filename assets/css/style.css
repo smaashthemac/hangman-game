@@ -1,21 +1,31 @@
 body {
 	background: url("http://media.harrypotter.bloomsbury.com/rep/g/page-background-shell%20-%202.png");
-	font-family: "Verdana";
+	height: 650px;
+	font-family: 'Prociono', serif;
+	font-size: 20px;
+	color: #fff;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 25px;
 }
 
 header {
 	margin-left: 325px;
-	margin-top: 25px;
+	margin-top: 15px;
 }
 
 #container {
-	background: #fff999;
-	margin-left: 500px;
-	margin-top: 20px;
+	background: #BAA5B6;
+	margin-left: 475px;
 	margin bottom: 50px;
-	width: 600px;
-	height: 700px;
-	padding: 25px;
+	margin-top: 25px;
+	width: 625px;
+	height: 425px;
+	padding: 45px 25px 25px 25px;
 	text-align: center;
-	border: rebeccapurple solid 4px;
 }

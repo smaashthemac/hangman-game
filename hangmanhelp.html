@@ -1,5 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Harry Potter Hangman</title>
+</head>
+<body>
+
+<!--begin HTML code-->
+<div id="guessedWord">
+</div>
+<div id="guessedLetters">
+</div>
+
+
+<script>
+
 //// create random words
-var words = ["harry", "voldemort", "wand", "owl", "muggle", "broom", "hogwarts", "wizard", "witch", "castle"];
+var words = ["giraffe", "hippo", "elephant"];
 
 //// pick random word
 // give us a random number between 0 and 1
@@ -18,7 +35,8 @@ var flooredNumber = Math.floor(indexRandom);
 // get our random word
 var randomWord = words[flooredNumber];
 // for cheating purposes, test
-console.log("For cheating purposes, the word is " + words[flooredNumber]);
+console.log(words[flooredNumber]);
+
 //// display underscores according to chosen word
 // this array will be populated dynamically 
 var uArr = [];
@@ -31,12 +49,6 @@ for (var i = 0; i < randomWord.length; i++) {
 	uArr.push("_");
 }
 
-// variables for guesses remaining, wins, game status
-var wins = 0;
-document.querySelector("#wins").innerHTML = wins;
-var guessesRemain = 12;
-document.querySelector("#guessesRemain").innerHTML = guessesRemain;
-var correctGuesses = 0;
 
 //get element specifically by id
 //var element = document.getElementbyId("guessedWord");
@@ -46,7 +58,7 @@ var correctGuesses = 0;
 // # targets an id
 // . targets a class
 // targets a div, p, h1, etc.
-var element = document.querySelector("#blankWord");
+var element = document.querySelector("#guessedWord");
 
 
 //var ehtml = element.innerHTML;
@@ -82,41 +94,32 @@ for (var i = 0; i < guessedLetters.length; i++) {
 			// compare input letter to current letter
 			if (keyChar === randomWord.charAt(i)) {
 				uArr[i] = keyChar;
-				correctGuesses++;
-					if (correctGuesses === randomWord.length) {
-						alert("You won! That's almost as cool as defeating Voldemort.");
-						wins++
-						document.querySelector("#wins").innerHTML = wins;	
-					}
 			} 
 		}
 
 			// push/add letter to our guessed letters array
-			guessedLetters.push(keyChar); 
-			// subtract from guesses remain
-			guessesRemain--;
-			// update guessesRemain on screen
-			document.querySelector("#guessesRemain").innerHTML = guessesRemain;	
-			if (guessesRemain == 0) {
-				alert("What are you, a muggle? Try again.");
-				location.reload();
-			}
+			guessedLetters.push(keyChar); 	
 		
 			// updates the html to show
-			document.querySelector("#blankWord").innerHTML = uArr.join(" ");
-			document.querySelector("#lettersGuessed").innerHTML = guessedLetters.join(" ");
+			document.querySelector("#guessedWord").innerHTML = uArr.join(" ");
+			document.querySelector("#guessedLetters").innerHTML = guessedLetters.join(" ");
 
 	}
 
 };
 
-
-
 //// to do stuff
+// wins
+// losses
+// number of guesses
+// styling
 
-// STYLING
-	// what happens when they win?
-	// when they lose?
 
-// start game over while keeping wins count intact
 
+
+
+
+
+</script>
+</body>
+</html>
