@@ -1,17 +1,18 @@
 body {
-	background: url("http://media.harrypotter.bloomsbury.com/rep/g/page-background-shell%20-%202.png");
+	background: url(../images/castle.jpg);
+	background-size: cover;
 	height: 650px;
-	font-family: 'Prociono', serif;
-	font-size: 20px;
+	font-family: 'Arvo', serif;
+	font-size: 18px;
 	color: #fff;
 }
 
 h1 {
-	font-size: 32px;
+	font-size: 30px;
 }
 
 h2 {
-	font-size: 25px;
+	font-size: 22px;
 }
 
 header {
@@ -20,12 +21,17 @@ header {
 }
 
 #container {
-	background: #BAA5B6;
+	text-align: center;
+	background-color: rgba(162,189,206,.7);
 	margin-left: 475px;
 	margin bottom: 50px;
-	margin-top: 25px;
+	margin-top: 35px;
 	width: 625px;
-	height: 425px;
+	height:500px;
 	padding: 45px 25px 25px 25px;
+}
+
+img {
+	margin-top: 50px;
 	text-align: center;
 }
