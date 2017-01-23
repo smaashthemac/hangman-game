@@ -26,9 +26,10 @@ header {
 	margin-left: 475px;
 	margin bottom: 50px;
 	margin-top: 35px;
-	width: 625px;
+	width: 675px;
 	height:500px;
 	padding: 45px 25px 25px 25px;
+	border: #fff 4px solid;
 }
 
 img {
