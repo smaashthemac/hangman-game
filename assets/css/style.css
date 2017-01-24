@@ -29,10 +29,14 @@ header {
 	width: 675px;
 	height:500px;
 	padding: 45px 25px 25px 25px;
-	border: #fff 4px solid;
+	border: #455063 4px solid;
 }
 
 img {
 	margin-top: 50px;
 	text-align: center;
+}
+
+hr {
+	border: #fff 1px solid;
 }
