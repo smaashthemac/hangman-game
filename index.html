@@ -6,55 +6,64 @@
 	<!--<script src="assets/javascript/game.js"></script>-->
 	<!-- link to reset styles -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- link to skeleton framework -->
+	<link rel="stylesheet" type="text/css" href="assets/css/skeleton.css">
 	<!-- link to custom styles -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<!-- link to google fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Arvo:400,400i" rel="stylesheet">
+	<!-- mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 <!--begin HTML code-->
-<header>
+<div class="container">
 
-	<img src="assets/images/hp-hangman.png" alt="Harry Potter Hangman" />
+	<img src="assets/images/hp-hangman.png" alt="Harry Potter Hangman" class="imageFull" />
+	<img src="assets/images/hp-hangman-stacked.png" alt="Harry Potter Hangman" class="imageMobile" />
 
-</header>
 
-<div id="container">
-	<h1>START THE GAME BY GUESSING A LETTER</h1>
-	<br><br>
-	<hr>
-	<br><br>
-	<div id="winsTitle">
-		<h2>——  <i>Wins</i>  ——</h2>
+	<div class="row">
+		
+		<div class="two column">
+		</div>
+
+		<div class="eight column" id="game">
+			<h1>START THE GAME BY GUESSING A LETTER</h1>
+			<br>
+			<hr>
+			<br>
+			<div id="winsTitle">
+				<h2>——  <i>Wins</i>  ——</h2>
+			</div>
+			<div id="wins">
+			</div>
+			<br>
+			<div id="currentWord">
+				<h2>——  <i>Current Word</i>  ——</h2>
+			</div>
+			<div id="blankWord">
+			</div>
+			<br>
+			<div id="guessesRemainTitle">
+				<h2>——  <i>Guesses Remaining</i>  ——</h2>
+			</div>
+			<div id="guessesRemain">
+			</div>
+			<br>
+			<div id="lettersGuessedTitle">
+				<h2>——  <i>Letters Guessed</i>  ——</h2>
+			</div>
+			<div id="lettersGuessed">
+			</div>
+			<br>
+		</div>
+
+		<div class="two column">
+		</div>
+
 	</div>
-	<br>
-	<div id="wins">
-	</div>
-	<br><br>
-	<div id="currentWord">
-		<h2>——  <i>Current Word</i>  ——</h2>
-	</div>
-	<br>
-	<div id="blankWord">
-	</div>
-	<br><br>
-	<div id="guessesRemainTitle">
-		<h2>——  <i>Guesses Remaining</i>  ——</h2>
-	</div>
-	<br>
-	<div id="guessesRemain">
-	</div>
-	<br><br>
-	<div id="lettersGuessedTitle">
-		<h2>——  <i>Letters Guessed</i>  ——</h2>
-	</div>
-	<br>
-	<div id="lettersGuessed">
-	</div>
-	<br><br>
-	<!--<div id="gameImage">
-	</div>-->
 
 </div>
 
